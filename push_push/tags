@@ -1,0 +1,125 @@
+$(NAME	Makefile	/^$(NAME): $(OBJ)$/
+.PHONY	Makefile	/^.PHONY: clean fclean re$/
+.c.o	Makefile	/^.c.o:$/
+ELF	print.o	1
+EèH‹EØH‹@	push_swap	10
+Eì÷Ø‰	ft_itoa.o	2
+Eì÷Ø‰	push_swap	7
+FLAGS	Makefile	/^FLAGS = -Wall -Wextra -Werror$/
+FT_PUSH_SWAP_H	ft_push_swap.h	14
+H‹EØHƒÀë	checker	14
+Mft_push_swap	ft_push_swap.c	/^int	main(int ac, char **av)$/
+Mps2	ps2.c	/^int	main(int argc, char **argv)$/
+NAME	Makefile	/^NAME = push_swap$/
+OBJ	Makefile	/^OBJ = ${SRC:.c=.o}$/
+SRC	Makefile	/^SRC = ft_push_swap.c ft_error.c ft_instruct.c ft_i/
+add	ps2.c	/^void	add(t_list **src, t_list *node)$/
+answerIsOk	py.py	/^def answerIsOk(answer):$/
+b_place	ft_push_swap.h	37
+begin	ft_push_swap.h	36
+clean	Makefile	/^clean:$/
+e_place	ft_push_swap.h	39
+end	ft_push_swap.h	38
+execCmd	py.py	/^def execCmd(prog, concat):$/
+fclean	Makefile	/^fclean: clean$/
+ft_atoi	ft_lib.c	/^int	ft_atoi(char const *s)$/
+ft_big_rotate	ft_big_sort2.c	/^t_stack	*ft_big_rotate(t_stack *st, t_mem nb)$/
+ft_big_rotate_b	ft_big_sort3.c	/^t_stack	*ft_big_rotate_b(t_stack *st, t_mem nb)$/
+ft_check_argv	ft_error.c	/^int	ft_check_argv(int ac, char **av)$/
+ft_check_argv2	ft_error.c	/^int	ft_check_argv2(int ac, char **av)$/
+ft_check_max	ft_big_sort1.c	/^int	ft_check_max(t_list *lst)$/
+ft_check_min	ft_big_sort3.c	/^int	ft_check_min(t_list *lst)$/
+ft_check_min_max	ft_error.c	/^int	ft_check_min_max(int ac, char **av)$/
+ft_choose_algo	ft_push_swap.c	/^t_stack	*ft_choose_algo(t_stack *st, int ac)$/
+ft_choose_three	ft_push_swap.c	/^t_stack	*ft_choose_three(t_stack *st)$/
+ft_count	ft_itoa.c	/^unsigned int	ft_count(unsigned int nb)$/
+ft_desc	ft_lst_utils.c	/^int	ft_desc(t_list *aa)$/
+ft_error	ft_error.c	/^void	ft_error(void)$/
+ft_first_sort	ft_big_sort2.c	/^t_stack	*ft_first_sort(int *tab, int *tab_sort, in/
+ft_first_sort_b	ft_big_sort3.c	/^t_stack	*ft_first_sort_b(int *tab, int *tab_sort, /
+ft_five	ft_small_algo.c	/^t_stack	*ft_five(t_stack *st)$/
+ft_for	ft_small_algo.c	/^t_stack	*ft_for(t_stack *st)$/
+ft_free_lst	ft_free.c	/^void	ft_free_lst(t_list *lst)$/
+ft_free_stack	ft_free.c	/^void	ft_free_stack(t_stack *st)$/
+ft_hundred	ft_five_hund.c	/^t_stack	*ft_hundred(t_stack *st, int slice_mem)$/
+ft_hundred2	ft_five_hund.c	/^t_stack	*ft_hundred2(t_stack *st)$/
+ft_hundred3	ft_five_hund.c	/^t_stack	*ft_hundred3(t_stack *st, int slice_mem)$/
+ft_init_a	ft_init.c	/^t_list	*ft_init_a(int ac, char **av)$/
+ft_init_tab	ft_big_sort1.c	/^int	*ft_init_tab(t_list *aa)$/
+ft_isdigit	ft_lib.c	/^int	ft_isdigit(int c)$/
+ft_itoa	ft_itoa.c	/^char	*ft_itoa(int n, unsigned int j)$/
+ft_lst_size	ft_big_sort1.c	/^int	ft_lst_size(t_list *lst)$/
+ft_lstadd_back	ft_init.c	/^void	ft_lstadd_back(t_list **alst, t_list *new)$/
+ft_lstlast	ft_init.c	/^t_list	*ft_lstlast(t_list *lst)$/
+ft_lstnew	ft_init.c	/^t_list	*ft_lstnew(int nb)$/
+ft_lstnew_char	ft_init.c	/^t_list	*ft_lstnew_char(char *ope)$/
+ft_meduim	ft_lst_utils.c	/^t_stack	*ft_meduim(t_stack *st)$/
+ft_nb_rotate	ft_lst_utils.c	/^t_stack	*ft_nb_rotate(t_stack *st)$/
+ft_order	ft_lib.c	/^int	ft_order(t_list *aa)$/
+ft_print	print.c	/^void	ft_print(t_stack *st)$/
+ft_push_a	ft_operation.c	/^t_stack	*ft_push_a(t_list *aa, t_list *bb)$/
+ft_push_b	ft_operation.c	/^t_stack	*ft_push_b(t_list *aa, t_list *bb)$/
+ft_putstr	ft_lib.c	/^void	ft_putstr(char *s)$/
+ft_quick_sort	ft_big_sort1.c	/^t_stack	*ft_quick_sort(t_stack *st)$/
+ft_quick_sort2	ft_big_sort1.c	/^t_stack	*ft_quick_sort2(t_stack *st)$/
+ft_quick_sort_b	ft_big_sort3.c	/^t_stack	*ft_quick_sort_b(t_stack *st, int slice_fi/
+ft_quick_sort_rev	ft_five_hund.c	/^t_stack	*ft_quick_sort_rev(t_stack *st, int slice_/
+ft_r_rotate	ft_operation.c	/^t_list	*ft_r_rotate(t_list *stack)$/
+ft_remoov	ft_big_sort2.c	/^t_stack	*ft_remoov(t_stack *st, int slice, int i)$/
+ft_remoov2	ft_five_hund.c	/^t_stack	*ft_remoov2(t_stack *st, int slice, int i)/
+ft_rotate	ft_operation.c	/^t_list	*ft_rotate(t_list *stack)$/
+ft_sign	ft_itoa.c	/^unsigned int	ft_sign(int n)$/
+ft_small	ft_small_algo.c	/^t_pos	ft_small(t_list *lst)$/
+ft_sort_end	ft_big_sort2.c	/^t_mem	ft_sort_end(int *tab, int *tab_sort, int siz/
+ft_sort_sort	ft_big_sort2.c	/^t_mem	ft_sort_sort(int *tab, int *tab_sort, int si/
+ft_sort_tab	ft_big_sort1.c	/^int	*ft_sort_tab(int *tab, int size_list)$/
+ft_sort_tab_rev	ft_big_sort3.c	/^int	*ft_sort_tab_rev(int *tab, int size_list)$/
+ft_strcmp	ft_lib.c	/^int	ft_strcmp(char *s1, char *s2)$/
+ft_swap	ft_operation.c	/^t_list	*ft_swap(t_list *stack)$/
+ft_three	ft_small_algo.c	/^t_stack	*ft_three(t_stack *st)$/
+ft_two	ft_small_algo.c	/^t_stack	*ft_two(t_stack *st, char *str)$/
+ft_val_end	ft_lst_utils.c	/^int	ft_val_end(t_list *lst)$/
+ft_write_instruct	ft_instruct.c	/^t_stack	*ft_write_instruct(char *str, t_stack *st)/
+ft_write_instruct2	ft_instruct.c	/^t_stack	*ft_write_instruct2(char *str, t_stack *st/
+getTestLines	py.py	/^def getTestLines():$/
+intToStr	py.py	/^def intToStr(arr, sep):$/
+list_len	ps2.c	/^int	list_len(t_list *src)$/
+min	ft_push_swap.h	44
+min_place	ft_push_swap.h	45
+n	ps2.c	9
+nb	ft_push_swap.h	22
+nb	ps2.c	8
+newPrompt	py.py	/^def newPrompt(message):$/
+new_node	ps2.c	/^t_list	*new_node(int n)$/
+next	ft_push_swap.h	24
+printUsage	py.py	/^def printUsage():$/
+print_flags	py.py	/^def print_flags(n, o):$/
+print_list	ps2.c	/^void	print_list(t_list *src)$/
+push	ps2.c	/^int	push(t_list **src, t_list **dst)$/
+rb	checker	133
+re	Makefile	/^re: fclean $(NAME)$/
+rotate	ps2.c	/^int	rotate(t_list **src)$/
+rrotate	ps2.c	/^int	rrotate(t_list **src)$/
+runLine	py.py	/^def runLine(line):$/
+runTest	py.py	/^def runTest(commands):$/
+s_list	ft_push_swap.h	20
+s_list	ps2.c	6
+s_mem	ft_push_swap.h	34
+s_pos	ft_push_swap.h	42
+s_stack	ft_push_swap.h	27
+size	ft_push_swap.h	46
+size_b	Test	23
+st_a	ft_push_swap.h	29
+st_b	ft_push_swap.h	30
+st_str	ft_push_swap.h	31
+str	ft_push_swap.h	23
+summary	py.py	/^def summary(line, ok, op, koCountCap, koNotSorted)/
+swap	ps2.c	/^int	swap(t_list **src)$/
+t_list	ft_push_swap.h	25
+t_list	ps2.c	10
+t_mem	ft_push_swap.h	40
+t_pos	ft_push_swap.h	47
+t_stack	ft_push_swap.h	32
+test	ft_push_swap.c	/^void	test(t_stack *st)$/
+to_b	ft_push_swap.c	/^void	to_b(t_stack *st)$/
+write_op	ps2.c	/^void	write_op(t_list **src, t_list **dst, char *st/
