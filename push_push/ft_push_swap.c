@@ -27,7 +27,7 @@ t_stack	*ft_choose_algo(t_stack *st, int ac)
 	else if (ac < 470)*/
 	//	st = ft_quick_sort2(st);
 	//st = ft_hundred2(st);
-	st = test(st);
+	st = ft_quick_five(st);
 	return (st);
 }
 

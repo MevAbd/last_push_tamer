@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
  
-SRC = ft_push_swap.c ft_error.c ft_instruct.c ft_itoa.c ft_init.c ft_lib.c ft_big_sort1.c ft_big_sort2.c ft_operation.c print.c ft_free.c ft_big_sort3.c ft_small_algo.c ft_lst_utils.c	ft_five_hund.c ft_my_algo.c
+SRC = ft_push_swap.c ft_error.c ft_instruct.c ft_itoa.c ft_init.c ft_lib.c ft_big_sort1.c ft_big_sort2.c ft_operation.c print.c ft_free.c ft_big_sort3.c ft_small_algo.c ft_lst_utils.c	ft_five_hund.c ft_my_algo.c ft_test_five.c 
 
 OBJ = ${SRC:.c=.o}
 

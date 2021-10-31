@@ -106,6 +106,7 @@ t_stack		*ft_choose_three(t_stack *st);
 t_stack		*ft_first_sort_b(int *tab, int *tab_sort, int slice, t_stack *st);
 t_stack		*ft_hundred(t_stack *st, int slice);
 t_stack		*ft_hundred2(t_stack *st);
+t_stack		*ft_quick_five(t_stack *st);
 unsigned int	ft_count(unsigned int nb);
 unsigned int	ft_sign(int n);
 
