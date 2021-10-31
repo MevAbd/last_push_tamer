@@ -12,34 +12,6 @@
 
 #include "ft_push_swap.h"
 
-t_pos	ft_small(t_list *lst)
-{
-	t_pos	pos;
-	int		i;
-
-	i = 0;
-	pos.size = ft_lst_size(lst);
-	pos.min = lst->nb;
-	pos.min_place = i;
-	while (lst->next)
-	{
-		if (pos.min > lst->nb)
-		{
-			pos.min = lst->nb;
-			pos.min_place = i;
-		}
-		lst = lst->next;
-		i++;
-	}
-	i++;
-	if (pos.min > lst->nb)
-	{
-		pos.min = lst->nb;
-		pos.min_place = i;
-	}
-	return (pos);
-}
-
 t_stack	*ft_two(t_stack *st, char *str)
 {
 	st = ft_write_instruct(str, st);
@@ -70,24 +42,41 @@ t_stack	*ft_three(t_stack *st)
 	return (st);
 }
 
-t_stack	*ft_for(t_stack *st)
+t_stack	*ft_quick_ten(t_stack *st, int slice)
 {
-	st = ft_nb_rotate(st);
-	st = ft_choose_three(st);
-	st = ft_write_instruct("pa\n", st);
+	int		*tab;
+	int		*tab_sort;
+	int		size;
+	t_mem	nb;
+
+	size = ft_lst_size(st->st_a) - slice;
+	tab_sort = ft_sort_tab(ft_init_tab(st->st_a), ft_lst_size(st->st_a));
+	while (ft_lst_size(st->st_a) > size)
+	{
+		tab = ft_init_tab(st->st_a);
+		nb = ft_sort_end(tab, tab_sort, ft_lst_size(st->st_a), slice);
+		st = ft_big_rotate(st, nb);
+		st = ft_write_instruct("pb\n", st);
+	}
 	return (st);
 }
 
-t_stack	*ft_five(t_stack *st)
+t_stack	*ft_quick_five(t_stack *st)
 {
-	st = ft_nb_rotate(st);
-	st = ft_nb_rotate(st);
-	st = ft_choose_three(st);
-	if (ft_order(st->st_b) == 1)
-		ft_two(st, "sb\n");
+	int	chunck;
+	int	max;
+	int	slice;
+
+	chunck = 0;
+	slice = ft_lst_size((st->st_a)) / 10;
+	while (chunck < 9)
+	{
+		st = ft_quick_ten(st, slice);
+		chunck++;
+	}
+	st = ft_quick_ten(st, ft_lst_size(st->st_a));
+	max = ft_check_max(st->st_b);
+	st = ft_remoov(st, 1, 0, max);
 	st = ft_write_instruct("pa\n", st);
-	st = ft_write_instruct("pa\n", st);
-	while (ft_order(st->st_a) != 1)
-		st = ft_five(st);
 	return (st);
 }

@@ -95,4 +95,3 @@ int	ft_check_min_max(int ac, char **av)
 	}
 	return (1);
 }
-

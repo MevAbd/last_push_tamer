@@ -59,46 +59,6 @@ t_list	*ft_r_rotate(t_list *stack)
 	stack->next = tmp1;
 	return (stack);
 }
-/*
-t_stack *ft_push_a(t_stack *st)
-{
-	t_list *st_a;
-	t_list *st_b;
-	t_list *node;
-
-	if (st->st_b == NULL)
-		return (st);
-	st_a = st->st_a;
-	st_b = st->st_b;
-	node = st_b;
-	if (st_b->next)
-		st_b = st_b->next;
-	node->next = st_a;
-	st_a = node;
-	st->st_b = st_b;
-	st->st_a = st_a;
-	return (st);
-}
-
-t_stack *ft_push_b(t_stack *st)
-{
-	t_list *st_a;
-	t_list *st_b;
-	t_list *node;
-
-	if (st->st_a == NULL)
-		return (st);
-	st_a = st->st_a;
-	st_b = st->st_b;
-	node = st_a;
-	if (st_a->next)
-		st_a = st_a->next;
-	node->next = st_b;
-	st_b = node;
-	st->st_a = st_a;
-	st->st_b = st_b;
-	return (st);
-}*/	
 
 t_stack	*ft_push_b(t_list *aa, t_list *bb)
 {

@@ -36,7 +36,6 @@ t_stack	*ft_write_instruct(char *str, t_stack *st)
 	}
 	else
 		ft_write_instruct2(str, st);
-//	ft_print(st);
 	return (st);
 }
 
@@ -65,7 +64,5 @@ t_stack	*ft_write_instruct2(char *str, t_stack *st)
 		st->st_b = ft_r_rotate(st->st_b);
 		write(1, str, 4);
 	}
-//	ft_print(st);
 	return (st);
 }
-

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_init.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/10/25 03:00:46 by malbrand          #+#    #+#             */
+/*   Updated: 2021/10/28 10:37:14 by malbrand         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_push_swap.h"
 
 t_list	*ft_lstlast(t_list *lst)
@@ -8,18 +20,6 @@ t_list	*ft_lstlast(t_list *lst)
 			lst = lst->next;
 	}
 	return (lst);
-}
-
-t_list	*ft_lstnew_char(char *ope)
-{
-	t_list	*elem;
-
-	elem = (t_list *)malloc(sizeof(t_list));
-	if (elem == NULL)
-		return (0);
-	elem->str = ope;
-	elem->next = 0;
-	return (elem);
 }
 
 t_list	*ft_lstnew(int nb)
@@ -72,4 +72,3 @@ t_list	*ft_init_a(int ac, char **av)
 	}
 	return (a);
 }
-

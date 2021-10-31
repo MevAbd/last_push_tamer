@@ -28,7 +28,7 @@ void	ft_free_stack(t_stack *st)
 {
 	if (st->st_a)
 		ft_free_lst(st->st_a);
-//	if (st->st_b)
-//		ft_free_lst(st->st_b);
-//	free(st);
+	if (st->st_b)
+		ft_free_lst(st->st_b);
+	free(st);
 }

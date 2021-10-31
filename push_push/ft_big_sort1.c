@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_big_sort1.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/10/25 03:00:46 by malbrand          #+#    #+#             */
+/*   Updated: 2021/10/28 10:37:14 by malbrand         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_push_swap.h"
 
 int	ft_lst_size(t_list *lst)
@@ -64,50 +76,6 @@ int	*ft_sort_tab(int *tab, int size_list)
 	}
 	tab2[i] = '\0';
 	return (tab2);
-}
-
-t_stack	*ft_quick_sort(t_stack *st)
-{
-	int	*tab;
-	int	*tab_sort;
-	int	slice;
-	int	slice_first;
-
-	slice = ft_lst_size(st->st_a) / 2;
-	slice_first = ft_lst_size(st->st_a) / 2;
-	while (ft_lst_size(st->st_a) >= 2)
-	{
-		tab = ft_init_tab(st->st_a);
-		tab_sort = ft_sort_tab(ft_init_tab(st->st_a), ft_lst_size(st->st_a));
-		st = ft_first_sort(tab, tab_sort, slice, st);
-		slice = ft_lst_size(st->st_a) / 2;
-	}
-	st = ft_remoov(st, slice_first, 0);
-	st = ft_quick_sort_b(st, slice_first);
-	st = ft_write_instruct("pa\n", st);
-	return (st);
-}
-
-t_stack	*ft_quick_sort2(t_stack *st)
-{
-	int	*tab;
-	int	*tab_sort;
-	int	slice;
-	int	slice_first;
-
-	slice_first = ft_lst_size(st->st_a) / 2;
-	st = ft_quick_sort(st);
-	slice = ft_lst_size(st->st_a) / 2 / 2;
-	while (ft_lst_size(st->st_a) >= slice_first)
-	{
-		tab = ft_init_tab(st->st_a);
-		tab_sort = ft_sort_tab(ft_init_tab(st->st_a), ft_lst_size(st->st_a));
-		st = ft_first_sort(tab, tab_sort, slice, st);
-		slice = slice / 2;
-	}
-	st = ft_remoov(st, 1, 0);
-	st = ft_write_instruct("pa\n", st);
-	return (st);
 }
 
 int	ft_check_max(t_list *lst)

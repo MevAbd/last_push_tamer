@@ -66,4 +66,3 @@ char	*ft_itoa(int n, unsigned int j)
 	}
 	return (res);
 }
-

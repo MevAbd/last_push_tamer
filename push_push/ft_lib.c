@@ -30,18 +30,6 @@ int	ft_order(t_list *aa)
 	return (1);
 }
 
-void	ft_putstr(char *s)
-{
-	int	i;
-
-	i = 0;
-	if (s != NULL)
-	{
-		while (s[i])
-			write(1, &s[i++], 1);
-	}
-}
-
 int	ft_strcmp(char *s1, char *s2)
 {
 	int		i;
@@ -86,4 +74,3 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
-

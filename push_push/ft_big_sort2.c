@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_big_sort2.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/10/25 03:00:46 by malbrand          #+#    #+#             */
+/*   Updated: 2021/10/28 10:37:14 by malbrand         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_push_swap.h"
 
 t_mem	ft_sort_sort(int *tab, int *tab_sort, int size, int size_sort)
@@ -73,34 +85,12 @@ t_stack	*ft_big_rotate(t_stack *st, t_mem nb)
 	return (st);
 }
 
-t_stack	*ft_first_sort(int *tab, int *tab_sort, int slice, t_stack *st)
+t_stack	*ft_remoov(t_stack *st, int slice, int i, int max)
 {
-	t_mem		nb;
-	int		size_lst;
-	int		size_sort;
-	int		max;
-
-	size_sort = ft_lst_size(st->st_a);
-	max = size_sort - slice - 1;
-	while (ft_lst_size(st->st_a) > max)
-	{
-		tab = ft_init_tab(st->st_a);
-		size_lst = ft_lst_size(st->st_a);
-		nb = ft_sort_end(tab, tab_sort, size_lst, slice);
-		st = ft_big_rotate(st, nb);
-		st = ft_write_instruct("pb\n", st);
-	}
-	return (st);
-}
-
-t_stack	*ft_remoov(t_stack *st, int slice, int i)
-{
-	int	max;
 	int	nb_rrotate;
 	int	*tab;
 
 	tab = ft_init_tab(st->st_b);
-	max = ft_check_max(st->st_b);
 	while (ft_lst_size(st->st_b) > slice)
 	{
 		i = 0;
@@ -111,7 +101,7 @@ t_stack	*ft_remoov(t_stack *st, int slice, int i)
 			while (i-- > 0)
 				st = ft_write_instruct("rb\n", st);
 		}
-		else 
+		else
 		{
 			nb_rrotate = ft_lst_size(st->st_b) - i;
 			while (nb_rrotate-- > 0)
@@ -123,4 +113,3 @@ t_stack	*ft_remoov(t_stack *st, int slice, int i)
 	}
 	return (st);
 }
-
