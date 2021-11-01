@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 03:37:52 by malbrand          #+#    #+#             */
-/*   Updated: 2021/10/27 13:34:53 by malbrand         ###   ########.fr       */
+/*   Updated: 2021/11/01 17:41:54 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,8 +59,7 @@ t_stack	*ft_quick_ten(t_stack *st, int slice)
 		st = ft_write_instruct("pb\n", st);
 	}
 	free(tab);
-	free(tab_sort)
-	ft_;
+	free(tab_sort);
 	return (st);
 }
 
