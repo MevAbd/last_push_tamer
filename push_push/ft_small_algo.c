@@ -58,6 +58,9 @@ t_stack	*ft_quick_ten(t_stack *st, int slice)
 		st = ft_big_rotate(st, nb);
 		st = ft_write_instruct("pb\n", st);
 	}
+	free(tab);
+	free(tab_sort)
+	ft_;
 	return (st);
 }
 

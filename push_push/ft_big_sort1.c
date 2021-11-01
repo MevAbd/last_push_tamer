@@ -36,7 +36,7 @@ int	*ft_init_tab(t_list *aa)
 	int	i;
 
 	i = 0;
-	tab = (int *)malloc(sizeof(int) * ft_lst_size(aa) + 1);
+	tab = (int *)malloc(sizeof(int) * ft_lst_size(aa) + 4);
 	if (tab == NULL)
 		return (NULL);
 	while (aa->next)
@@ -57,7 +57,7 @@ int	*ft_sort_tab(int *tab, int size_list)
 	int	tmp;
 	int	*tab2;
 
-	tab2 = (int *)malloc(sizeof(int) * size_list + 1);
+	tab2 = (int *)malloc(sizeof(int) * size_list + 4);
 	if (tab2 == NULL)
 		return (NULL);
 	tab2 = tab;

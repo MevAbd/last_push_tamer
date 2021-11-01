@@ -20,7 +20,6 @@
 typedef struct s_list
 {
 	int				nb;
-	char			*str;
 	struct s_list	*next;
 }					t_list;
 

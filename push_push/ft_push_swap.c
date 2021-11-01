@@ -34,21 +34,30 @@ t_stack	*ft_choose_algo(t_stack *st, int ac)
 int	main(int ac, char **av)
 {
 	t_stack	*st;
+	int	i;
 
+	i = 0;
 	st = malloc(sizeof(t_stack));
 	if (st == NULL)
 		return (0);
 	st->st_a = NULL;
 	st->st_b = NULL;
-	st->st_str = NULL;
 	if (ac == 2)
+	{
+		free(st);
 		return (0);
+	}
 	if (ft_check_min_max(ac, av) == -1)
+	{
+		free(st);
 		ft_error();
+	}
 	st->st_a = ft_init_a(ac, av);
 	st->st_b = ft_init_a(0, NULL);
 	if (ft_order(st->st_a) == -1)
 		st = ft_choose_algo(st, ac);
+	while (1)
+		i++;
 	ft_free_stack(st);
 	return (0);
 }
