@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 05:42:11 by malbrand          #+#    #+#             */
-/*   Updated: 2021/10/28 17:20:02 by malbrand         ###   ########.fr       */
+/*   Updated: 2021/11/01 23:10:01 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,48 +60,18 @@ t_list	*ft_r_rotate(t_list *stack)
 	return (stack);
 }
 
-t_stack	*ft_push_b(t_list *aa, t_list *bb)
+void	ft_push_lst(t_list **aa, t_list **bb)
 {
-	t_stack	*st;
 	t_list	*tmp1;
 
-	tmp1 = malloc(sizeof(t_list));
-	st = malloc(sizeof(t_stack));
-	st->st_a = aa;
-	st->st_b = bb;
-	if (aa)
+	if (*aa)
 	{
-		tmp1 = aa;
-		aa = aa->next;
-		if (bb)
-			tmp1->next = bb;
+		tmp1 = *aa;
+		*aa = (*aa)->next;
+		if (*bb)
+			tmp1->next = *bb;
 		else
 			tmp1->next = NULL;
-		st->st_b = tmp1;
-		st->st_a = aa;
+		*bb = tmp1;
 	}
-	return (st);
-}
-
-t_stack	*ft_push_a(t_list *aa, t_list *bb)
-{
-	t_stack	*st;
-	t_list	*tmp1;
-
-	tmp1 = malloc(sizeof(t_list));
-	st = malloc(sizeof(t_stack));
-	st->st_a = aa;
-	st->st_b = bb;
-	if (bb)
-	{
-		tmp1 = bb;
-		bb = bb->next;
-		tmp1->next = aa;
-		st->st_a = tmp1;
-		if (bb)
-			st->st_b = bb;
-		if (!(bb))
-			st->st_b = NULL;
-	}
-	return (st);
 }

@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 03:00:46 by malbrand          #+#    #+#             */
-/*   Updated: 2021/10/28 10:37:14 by malbrand         ###   ########.fr       */
+/*   Updated: 2021/11/01 23:14:06 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,7 @@ t_stack	*ft_choose_algo(t_stack *st, int ac)
 int	main(int ac, char **av)
 {
 	t_stack	*st;
-	int	i;
 
-	i = 0;
 	st = malloc(sizeof(t_stack));
 	if (st == NULL)
 		return (0);
@@ -56,8 +54,6 @@ int	main(int ac, char **av)
 	st->st_b = ft_init_a(0, NULL);
 	if (ft_order(st->st_a) == -1)
 		st = ft_choose_algo(st, ac);
-	while (1)
-		i++;
 	ft_free_stack(st);
 	return (0);
 }

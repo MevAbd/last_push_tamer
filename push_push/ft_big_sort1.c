@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 03:00:46 by malbrand          #+#    #+#             */
-/*   Updated: 2021/10/28 10:37:14 by malbrand         ###   ########.fr       */
+/*   Updated: 2021/11/01 22:10:33 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,24 @@ int	*ft_init_tab(t_list *aa)
 		aa = aa->next;
 	}
 	tab[i] = aa->nb;
-	i++;
-	tab[i] = '\0';
 	return (tab);
+}
+
+int	*ft_tabcpy(int *tab, int size)
+{
+	int	i;
+	int	*tab_cpy;
+
+	tab_cpy = (int *)malloc(sizeof(int) * size + 4);
+	if (tab_cpy == NULL)
+		return (NULL);
+	i = 0;
+	while (i < size)
+	{
+		tab_cpy[i] = tab[i];
+		i++;
+	}
+	return (tab_cpy);
 }
 
 int	*ft_sort_tab(int *tab, int size_list)
@@ -57,10 +72,7 @@ int	*ft_sort_tab(int *tab, int size_list)
 	int	tmp;
 	int	*tab2;
 
-	tab2 = (int *)malloc(sizeof(int) * size_list + 4);
-	if (tab2 == NULL)
-		return (NULL);
-	tab2 = tab;
+	tab2 = ft_tabcpy(tab, size_list);
 	i = 0;
 	while (i + 1 < size_list)
 	{

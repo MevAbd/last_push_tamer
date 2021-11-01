@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 03:00:46 by malbrand          #+#    #+#             */
-/*   Updated: 2021/10/28 10:37:14 by malbrand         ###   ########.fr       */
+/*   Updated: 2021/11/01 23:21:18 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ t_mem	ft_sort_sort(int *tab, int *tab_sort, int size, int size_sort)
 	while (i < size)
 	{
 		j = 0;
-		while (j <= size_sort)
+		while (j < size_sort)
 		{
 			if (tab[i] == tab_sort[j])
 			{
@@ -51,7 +51,7 @@ t_mem	ft_sort_end(int *tab, int *tab_sort, int size, int size_sort)
 	while (size > 0)
 	{
 		j = 0;
-		while (j <= (size_sort))
+		while (j < (size_sort))
 		{
 			if (tab[size] == tab_sort[j])
 			{
@@ -85,9 +85,26 @@ t_stack	*ft_big_rotate(t_stack *st, t_mem nb)
 	return (st);
 }
 
-t_stack	*ft_remoov(t_stack *st, int slice, int i, int max)
+t_stack	*ft_normi(t_stack *st, int i, int size)
 {
 	int	nb_rrotate;
+
+	if (i <= size)
+	{
+		while (i-- > 0)
+			st = ft_write_instruct("rb\n", st);
+	}
+	else
+	{
+		nb_rrotate = ft_lst_size(st->st_b) - i;
+		while (nb_rrotate-- > 0)
+			st = ft_write_instruct("rrb\n", st);
+	}
+	return (st);
+}
+
+t_stack	*ft_remoov(t_stack *st, int slice, int i, int max)
+{
 	int	*tab;
 
 	tab = ft_init_tab(st->st_b);
@@ -96,20 +113,12 @@ t_stack	*ft_remoov(t_stack *st, int slice, int i, int max)
 		i = 0;
 		while (tab[i] != max)
 			i++;
-		if (i <= ft_lst_size(st->st_b) / 2)
-		{
-			while (i-- > 0)
-				st = ft_write_instruct("rb\n", st);
-		}
-		else
-		{
-			nb_rrotate = ft_lst_size(st->st_b) - i;
-			while (nb_rrotate-- > 0)
-				st = ft_write_instruct("rrb\n", st);
-		}
+		st = ft_normi(st, i, (ft_lst_size(st->st_b) / 2));
 		st = ft_write_instruct("pa\n", st);
+		free(tab);
 		tab = ft_init_tab(st->st_b);
 		max = ft_check_max(st->st_b);
 	}
+	free(tab);
 	return (st);
 }

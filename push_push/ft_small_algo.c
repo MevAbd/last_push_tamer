@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 03:37:52 by malbrand          #+#    #+#             */
-/*   Updated: 2021/11/01 17:41:54 by malbrand         ###   ########.fr       */
+/*   Updated: 2021/11/01 22:19:02 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,15 +50,17 @@ t_stack	*ft_quick_ten(t_stack *st, int slice)
 	t_mem	nb;
 
 	size = ft_lst_size(st->st_a) - slice;
-	tab_sort = ft_sort_tab(ft_init_tab(st->st_a), ft_lst_size(st->st_a));
+	tab = ft_init_tab(st->st_a);
+	tab_sort = ft_sort_tab(tab, ft_lst_size(st->st_a));
+	free(tab);
 	while (ft_lst_size(st->st_a) > size)
 	{
 		tab = ft_init_tab(st->st_a);
 		nb = ft_sort_end(tab, tab_sort, ft_lst_size(st->st_a), slice);
 		st = ft_big_rotate(st, nb);
 		st = ft_write_instruct("pb\n", st);
+		free(tab);
 	}
-	free(tab);
 	free(tab_sort);
 	return (st);
 }
