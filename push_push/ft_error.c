@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 03:00:46 by malbrand          #+#    #+#             */
-/*   Updated: 2021/10/28 10:37:14 by malbrand         ###   ########.fr       */
+/*   Updated: 2021/11/01 23:40:55 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 void	ft_error(void)
 {
 	write(1, "Error\n", 6);
-	exit(0);
 }
 
 int	ft_check_argv(int ac, char **av)
@@ -47,7 +46,7 @@ int	ft_check_argv2(int ac, char **av)
 
 	i = 1;
 	if (ft_check_argv(ac, av) == -1)
-		ft_error();
+		return (-1);
 	else
 	{
 		while (av[i])
@@ -78,7 +77,7 @@ int	ft_check_min_max(int ac, char **av)
 	j = 0;
 	index = 1;
 	if (ft_check_argv2(ac, av) == -1)
-		ft_error();
+		return (-1);
 	else
 	{
 		while (ac > index)

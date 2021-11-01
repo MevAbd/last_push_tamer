@@ -6,7 +6,7 @@
 #    By: malbrand <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/25 08:16:12 by malbrand          #+#    #+#              #
-#    Updated: 2021/11/01 23:11:16 by malbrand         ###   ########.fr        #
+#    Updated: 2021/11/01 23:55:09 by malbrand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
  
@@ -14,7 +14,7 @@ SRC = ft_push_swap.c ft_error.c ft_instruct.c ft_itoa.c ft_init.c ft_lib.c ft_bi
 
 OBJ = ${SRC:.c=.o}
 
-FLAGS = -Wall -Wextra -Werror -g
+FLAGS = -Wall -Wextra -Werror
 
 .c.o:
 	gcc $(FLAGS) -c $< -o $(<:.c=.o)

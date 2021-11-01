@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 02:51:35 by malbrand          #+#    #+#             */
-/*   Updated: 2021/11/01 22:52:10 by malbrand         ###   ########.fr       */
+/*   Updated: 2021/11/02 00:07:31 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ t_list			*ft_swap(t_list *stack);
 t_list			*ft_r_rotate(t_list *stack);
 t_list			*ft_rotate(t_list *stack);
 t_stack			*ft_three(t_stack *st);
+t_stack			*ft_choose_three(t_stack *st);
 t_stack			*ft_two(t_stack *st, char *str);
 void			ft_push_lst(t_list **aa, t_list **bb);
 //void			*ft_push_b(t_list **aa, t_list **bb);
@@ -86,6 +87,7 @@ t_stack			*ft_write_instruct(char *str, t_stack *st);
 t_stack			*ft_write_instruct2(char *str, t_stack *st);
 t_stack			*ft_quick_ten(t_stack *st, int slice);
 t_stack			*ft_quick_five(t_stack *st);
+t_stack			*ft_five(t_stack *st);
 unsigned int	ft_sign(int n);
 unsigned int	ft_count(unsigned int nb);
 void			ft_print(t_stack *st);

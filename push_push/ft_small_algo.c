@@ -6,17 +6,11 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 03:37:52 by malbrand          #+#    #+#             */
-/*   Updated: 2021/11/01 22:19:02 by malbrand         ###   ########.fr       */
+/*   Updated: 2021/11/02 00:23:24 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_push_swap.h"
-
-t_stack	*ft_two(t_stack *st, char *str)
-{
-	st = ft_write_instruct(str, st);
-	return (st);
-}
 
 t_stack	*ft_three(t_stack *st)
 {
@@ -81,6 +75,40 @@ t_stack	*ft_quick_five(t_stack *st)
 	st = ft_quick_ten(st, ft_lst_size(st->st_a));
 	max = ft_check_max(st->st_b);
 	st = ft_remoov(st, 1, 0, max);
+	st = ft_write_instruct("pa\n", st);
+	return (st);
+}
+
+int	ft_check_min(t_list *lst)
+{
+	int	max;
+
+	max = lst->nb;
+	while (lst->next)
+	{
+		if (max > lst->nb)
+			max = lst->nb;
+		lst = lst->next;
+	}
+	if (max > lst->nb)
+		max = lst->nb;
+	return (max);
+}
+
+t_stack	*ft_five(t_stack *st)
+{
+	int	min;
+
+	min = ft_check_min(st->st_a);
+	while (st->st_a->nb != min)
+		st = ft_write_instruct("ra\n", st);
+	st = ft_write_instruct("pb\n", st);
+	min = ft_check_min(st->st_a);
+	while (st->st_a->nb != min)
+		st = ft_write_instruct("ra\n", st);
+	st = ft_write_instruct("pb\n", st);
+	st = ft_choose_three(st);
+	st = ft_write_instruct("pa\n", st);
 	st = ft_write_instruct("pa\n", st);
 	return (st);
 }
