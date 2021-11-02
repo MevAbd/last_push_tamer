@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 03:00:46 by malbrand          #+#    #+#             */
-/*   Updated: 2021/11/02 00:22:18 by malbrand         ###   ########.fr       */
+/*   Updated: 2021/11/02 03:55:18 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,15 +48,15 @@ int	main(int ac, char **av)
 		return (0);
 	st->st_a = NULL;
 	st->st_b = NULL;
+	if (!(ac >= 2))
+	{
+		free(st);
+		return (0);
+	}
 	if (ft_check_min_max(ac, av) == -1)
 	{
 		free(st);
 		ft_error();
-		return (0);
-	}
-	if (!(ac >= 2))
-	{
-		free(st);
 		return (0);
 	}
 	st->st_a = ft_init_a(ac, av);

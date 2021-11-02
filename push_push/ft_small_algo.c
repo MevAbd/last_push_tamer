@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 03:37:52 by malbrand          #+#    #+#             */
-/*   Updated: 2021/11/02 00:23:24 by malbrand         ###   ########.fr       */
+/*   Updated: 2021/11/02 04:08:16 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,26 +79,29 @@ t_stack	*ft_quick_five(t_stack *st)
 	return (st);
 }
 
-int	ft_check_min(t_list *lst)
+t_stack	*ft_normi(t_stack *st)
 {
-	int	max;
-
-	max = lst->nb;
-	while (lst->next)
-	{
-		if (max > lst->nb)
-			max = lst->nb;
-		lst = lst->next;
-	}
-	if (max > lst->nb)
-		max = lst->nb;
-	return (max);
+	st = ft_write_instruct("rra\n", st);
+	st = ft_write_instruct("pb\n", st);
+	st = ft_write_instruct("rra\n", st);
+	st = ft_write_instruct("pb\n", st);
+	st = ft_write_instruct("rra\n", st);
+	st = ft_write_instruct("rra\n", st);
+	st = ft_write_instruct("sa\n", st);
+	st = ft_write_instruct("pa\n", st);
+	st = ft_write_instruct("pa\n", st);
+	return (st);
 }
 
 t_stack	*ft_five(t_stack *st)
 {
 	int	min;
 
+	if (ft_desc(st->st_a) == 1)
+	{
+		st = ft_normi(st);
+		return (st);
+	}
 	min = ft_check_min(st->st_a);
 	while (st->st_a->nb != min)
 		st = ft_write_instruct("ra\n", st);

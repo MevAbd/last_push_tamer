@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 02:51:35 by malbrand          #+#    #+#             */
-/*   Updated: 2021/11/02 00:07:31 by malbrand         ###   ########.fr       */
+/*   Updated: 2021/11/02 03:58:46 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ typedef struct s_nb
 
 int				ft_isdigit(int c);
 int				ft_order(t_list *aa);
+int				ft_desc(t_list *aa);
 int				ft_atoi(char const *s);
 int				ft_strcmp(char *s1, char *s2);
 int				ft_lst_size(t_list *lst);

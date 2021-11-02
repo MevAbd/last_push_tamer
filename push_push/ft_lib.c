@@ -6,11 +6,30 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 03:02:12 by malbrand          #+#    #+#             */
-/*   Updated: 2021/11/01 23:38:22 by malbrand         ###   ########.fr       */
+/*   Updated: 2021/11/02 03:56:48 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_push_swap.h"
+
+int	ft_desc(t_list *aa)
+{
+	int	mem;
+
+	mem = aa->nb;
+	if (aa->next)
+		aa = aa->next;
+	if (mem < aa->nb)
+		return (-1);
+	while (aa->next)
+	{
+		mem = aa->nb;
+		aa = aa->next;
+		if (mem < aa->nb)
+			return (-1);
+	}
+	return (1);
+}
 
 int	ft_order(t_list *aa)
 {
