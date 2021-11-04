@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_error.c                                         :+:      :+:    :+:   */
+/*   ft_five.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 03:00:46 by malbrand          #+#    #+#             */
-/*   Updated: 2021/11/01 23:40:55 by malbrand         ###   ########.fr       */
+/*   Updated: 2021/11/04 22:23:45 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,13 +82,13 @@ t_stack	*ft_moov(t_stack *st)
 
 	b = st->st_b->nb;
 	nb = ft_fill(st);
-	if (b > nb.aa && b > nb.bb & b > nb.cc)
+	if ((b > nb.aa) && (b > nb.bb) && (b > nb.cc))
 		st = ft_write_moov(st, 1);
-	if (b < nb.aa && b < nb.bb & b < nb.cc)
+	if ((b < nb.aa) && (b < nb.bb) && (b < nb.cc))
 		st = ft_write_moov(st, 0);
-	if (b > nb.aa && b < nb.bb & b < nb.cc)
+	if ((b > nb.aa) && (b < nb.bb) && (b < nb.cc))
 		st = ft_write_moov(st, 2);
-	if (b > nb.aa && b > nb.bb & b < nb.cc)
+	if ((b > nb.aa) && (b > nb.bb) && (b < nb.cc))
 		st = ft_write_moov(st, 3);
 	return (st);
 }
@@ -100,15 +100,15 @@ t_stack	*ft_moov_bis(t_stack *st)
 
 	b = st->st_b->nb;
 	nb = ft_fill(st);
-	if (b > nb.aa && b > nb.bb & b > nb.cc && b > nb.dd)
+	if ((b > nb.aa) && (b > nb.bb) && (b > nb.cc) && (b > nb.dd))
 		st = ft_write_moov(st, 1);
-	if (b < nb.aa && b < nb.bb & b < nb.cc && b < nb.dd)
+	if ((b < nb.aa) && (b < nb.bb) && (b < nb.cc) && (b < nb.dd))
 		st = ft_write_moov(st, 0);
-	if (b > nb.aa && b < nb.bb & b < nb.cc && b < nb.dd)
+	if ((b > nb.aa) && (b < nb.bb) && (b < nb.cc) && (b < nb.dd))
 		st = ft_write_moov(st, 2);
-	if (b > nb.aa && b > nb.bb & b < nb.cc && b < nb.dd)
+	if ((b > nb.aa) && (b > nb.bb) && (b < nb.cc) && (b < nb.dd))
 		st = ft_write_moov(st, 4);
-	if (b > nb.aa && b > nb.bb & b > nb.cc && b < nb.dd)
+	if ((b > nb.aa) && (b > nb.bb) && (b > nb.cc) && (b < nb.dd))
 		st = ft_write_moov(st, 3);
 	return (st);
 }

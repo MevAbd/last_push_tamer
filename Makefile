@@ -6,11 +6,12 @@
 #    By: malbrand <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/25 08:16:12 by malbrand          #+#    #+#              #
-#    Updated: 2021/11/01 23:55:09 by malbrand         ###   ########.fr        #
+#    Updated: 2021/11/04 22:18:54 by malbrand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
  
-SRC = ft_push_swap.c ft_error.c ft_instruct.c ft_itoa.c ft_init.c ft_lib.c ft_big_sort1.c ft_big_sort2.c ft_operation.c ft_free.c ft_small_algo.c ft_five.c
+SRC = ft_push_swap.c ft_error.c ft_instruct.c ft_itoa.c ft_init.c ft_lib.c \
+	ft_big_sort1.c ft_big_sort2.c ft_operation.c ft_free.c ft_small_algo.c ft_five.c
 
 OBJ = ${SRC:.c=.o}
 
