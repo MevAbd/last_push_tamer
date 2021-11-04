@@ -55,7 +55,7 @@ t_stack	*ft_write_moov2(t_stack *st, int nb)
 
 t_stack	*ft_write_moov(t_stack *st, int nb)
 {
-	if (nb > 3)
+	if (nb < 3)
 		st = ft_write_moov2(st, nb);
 	else if (nb == 3)
 	{

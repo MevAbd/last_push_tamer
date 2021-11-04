@@ -35,7 +35,7 @@ t_stack	*ft_write_instruct(char *str, t_stack *st)
 		write(1, str, 3);
 	}
 	else
-		ft_write_instruct2(str, st);
+		st = ft_write_instruct2(str, st);
 	return (st);
 }
 
