@@ -6,11 +6,21 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 03:00:46 by malbrand          #+#    #+#             */
-/*   Updated: 2021/11/02 03:55:18 by malbrand         ###   ########.fr       */
+/*   Updated: 2021/11/02 00:22:18 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_push_swap.h"
+
+t_stack	*ft_choose_five(t_stack *st)
+{
+	st = ft_write_instruct("pb\n", st);
+	st = ft_write_instruct("pb\n", st);
+	st = ft_choose_three(st);
+	st = ft_moov(st);
+	st = ft_moov_bis(st);
+	return (st);
+}
 
 t_stack	*ft_two(t_stack *st, char *str)
 {
@@ -48,15 +58,16 @@ int	main(int ac, char **av)
 		return (0);
 	st->st_a = NULL;
 	st->st_b = NULL;
-	if (!(ac >= 2))
+	if (ac == 1)
 	{
 		free(st);
 		return (0);
 	}
-	if (ft_check_min_max(ac, av) == -1)
+	if ((ft_check_min_max(ac, av) == -1) || (!(ac >= 2)))
 	{
 		free(st);
-		ft_error();
+		if (ft_check_min_max(ac, av) == -1)
+			ft_error();
 		return (0);
 	}
 	st->st_a = ft_init_a(ac, av);

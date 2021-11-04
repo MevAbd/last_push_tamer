@@ -6,27 +6,11 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 03:00:46 by malbrand          #+#    #+#             */
-/*   Updated: 2021/11/02 04:04:15 by malbrand         ###   ########.fr       */
+/*   Updated: 2021/10/28 10:37:14 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_push_swap.h"
-
-int	ft_check_min(t_list *lst)
-{
-	int	max;
-
-	max = lst->nb;
-	while (lst->next)
-	{
-		if (max > lst->nb)
-			max = lst->nb;
-		lst = lst->next;
-	}
-	if (max > lst->nb)
-		max = lst->nb;
-	return (max);
-}
 
 t_list	*ft_lstlast(t_list *lst)
 {

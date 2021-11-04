@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 02:51:35 by malbrand          #+#    #+#             */
-/*   Updated: 2021/11/02 03:58:46 by malbrand         ###   ########.fr       */
+/*   Updated: 2021/11/02 00:07:31 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,12 @@ typedef struct s_nb
 	int	aa;
 	int	bb;
 	int	cc;
+	int	dd;
+	int	ee;
 }		t_nb;
 
 int				ft_isdigit(int c);
 int				ft_order(t_list *aa);
-int				ft_desc(t_list *aa);
 int				ft_atoi(char const *s);
 int				ft_strcmp(char *s1, char *s2);
 int				ft_lst_size(t_list *lst);
@@ -71,6 +72,7 @@ void			ft_free_stack(t_stack *st);
 void			ft_lstadd_back(t_list **alst, t_list *new);
 t_mem			ft_sort_sort(int *tab, int *tab_sort, int size, int size_sort);
 t_mem			ft_sort_end(int *tab, int *tab_sort, int size, int size_sort);
+t_nb			ft_fill(t_stack *st);
 t_list			*ft_lstnew(int nb);
 t_list			*ft_lstlast(t_list *lst);
 t_list			*ft_init_a(int ac, char **av);
@@ -81,14 +83,16 @@ t_stack			*ft_three(t_stack *st);
 t_stack			*ft_choose_three(t_stack *st);
 t_stack			*ft_two(t_stack *st, char *str);
 void			ft_push_lst(t_list **aa, t_list **bb);
-//void			*ft_push_b(t_list **aa, t_list **bb);
 t_stack			*ft_big_rotate(t_stack *st, t_mem nb);
 t_stack			*ft_remoov(t_stack *st, int slice, int i, int max);
 t_stack			*ft_write_instruct(char *str, t_stack *st);
 t_stack			*ft_write_instruct2(char *str, t_stack *st);
 t_stack			*ft_quick_ten(t_stack *st, int slice);
 t_stack			*ft_quick_five(t_stack *st);
+t_stack			*ft_choose_five(t_stack *st);
 t_stack			*ft_five(t_stack *st);
+t_stack			*ft_moov(t_stack *st);
+t_stack			*ft_moov_bis(t_stack *st);
 unsigned int	ft_sign(int n);
 unsigned int	ft_count(unsigned int nb);
 void			ft_print(t_stack *st);

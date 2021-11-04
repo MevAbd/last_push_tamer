@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 03:37:52 by malbrand          #+#    #+#             */
-/*   Updated: 2021/11/02 04:08:16 by malbrand         ###   ########.fr       */
+/*   Updated: 2021/11/02 00:23:24 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,39 +79,46 @@ t_stack	*ft_quick_five(t_stack *st)
 	return (st);
 }
 
-t_stack	*ft_normi(t_stack *st)
+int	ft_check_min(t_list *lst)
 {
-	st = ft_write_instruct("rra\n", st);
-	st = ft_write_instruct("pb\n", st);
-	st = ft_write_instruct("rra\n", st);
-	st = ft_write_instruct("pb\n", st);
-	st = ft_write_instruct("rra\n", st);
-	st = ft_write_instruct("rra\n", st);
-	st = ft_write_instruct("sa\n", st);
-	st = ft_write_instruct("pa\n", st);
-	st = ft_write_instruct("pa\n", st);
-	return (st);
+	int	max;
+
+	max = lst->nb;
+	while (lst->next)
+	{
+		if (max > lst->nb)
+			max = lst->nb;
+		lst = lst->next;
+	}
+	if (max > lst->nb)
+		max = lst->nb;
+	return (max);
 }
 
 t_stack	*ft_five(t_stack *st)
 {
-	int	min;
+	t_nb	nb;
 
-	if (ft_desc(st->st_a) == 1)
+	nb = ft_fill(st);
+	if (nb.aa < nb.bb && nb.aa < nb.cc && nb.aa > nb.dd
+		&& nb.aa > nb.ee && nb.bb < nb.cc && nb.bb > nb.dd
+		&& nb.bb > nb.ee && nb.cc > nb.dd && nb.cc > nb.ee && nb.dd > nb.ee)
 	{
-		st = ft_normi(st);
+		st = ft_write_instruct("rra\n", st);
+		st = ft_write_instruct("rra\n", st);
+		st = ft_write_instruct("sa\n", st);
 		return (st);
 	}
-	min = ft_check_min(st->st_a);
-	while (st->st_a->nb != min)
+	else if (nb.aa < nb.bb && nb.aa > nb.cc && nb.aa < nb.dd
+		&& nb.aa > nb.ee && nb.bb > nb.cc && nb.bb < nb.dd && nb.bb > nb.ee
+		&& nb.cc < nb.dd && nb.cc < nb.ee && nb.dd > nb.ee)
+	{
 		st = ft_write_instruct("ra\n", st);
-	st = ft_write_instruct("pb\n", st);
-	min = ft_check_min(st->st_a);
-	while (st->st_a->nb != min)
 		st = ft_write_instruct("ra\n", st);
-	st = ft_write_instruct("pb\n", st);
-	st = ft_choose_three(st);
-	st = ft_write_instruct("pa\n", st);
-	st = ft_write_instruct("pa\n", st);
+		st = ft_write_instruct("sa\n", st);
+		st = ft_write_instruct("ra\n", st);
+		return (st);
+	}
+	st = ft_choose_five(st);
 	return (st);
 }
